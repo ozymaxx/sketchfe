@@ -55,3 +55,9 @@ The following examples refer to the same sketch.
 
 
 There will be more feature extraction methods in the following versions.
+
+###Contact
+oaltiok15@ku.edu.tr - Ozan Can Altıok
+kkaiyrbekov15@ku.edu.tr - Kurmanbek Kaiyrbekov
+
+http://iui.ku.edu.tr - Koç University Intelligent User Interfaces Laboratory
