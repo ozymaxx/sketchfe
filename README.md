@@ -4,7 +4,7 @@ We implemented the sketch feature extraction mechanism mentioned in the followin
 
 ##Usage
 * Download the files
-* Run "python setup.py install"
+* Run ```python setup.py install```
 * You can try running the following code to see if it is working:
 
 ```
@@ -49,8 +49,9 @@ The following examples refer to the same sketch.
 ```
 
 * Points as rows
-
+```
     1\t9\t0\t4.6\n6\t5\t0\t8\n10.2\t44.4\t1\t9\n3\t77\t1\t12\n5\t7\t1\t13
+```
 
 
 There will be more feature extraction methods in the following versions.
