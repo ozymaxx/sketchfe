@@ -15,13 +15,14 @@ import matplotlib.pyplot as plt
 import xml.etree.cElementTree as ET
 import os
 import uuid
+import copy
 
 class Sketch:
     
     #Instantiate sketch
     def __init__( self, sketch_id, strokes=[]):
         self.sketch_id = sketch_id
-        self.strokes = strokes
+        self.strokes = copy.copy(strokes)
     
     #Add stroke to a list of strokes of the sketch,
     #takes stroke instance as a parameter  
