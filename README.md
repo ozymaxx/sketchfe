@@ -14,7 +14,7 @@ idm.extractimage_test()
 ```
 
 ##The format of the symbol sketches
-A sketch is defined as a set of strokes including ink points. You can keep the sektches in 3 different formats, described below.
+A sketch is defined as a set of strokes including ink points. You can keep the sketches in 3 different formats, described below.
 
 The following examples refer to the same sketch.
 
