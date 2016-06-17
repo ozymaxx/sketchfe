@@ -87,7 +87,7 @@ with open(filename,'rb') as f:
 ```
 
 ###Contact
-oaltiok15@ku.edu.tr - Ozan Can Altıok
-kkaiyrbekov15@ku.edu.tr - Kurmanbek Kaiyrbekov
+* oaltiok15@ku.edu.tr - Ozan Can Altıok
+* kkaiyrbekov15@ku.edu.tr - Kurmanbek Kaiyrbekov
 
 http://iui.ku.edu.tr - Koç University Intelligent User Interfaces Laboratory
