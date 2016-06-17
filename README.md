@@ -4,11 +4,12 @@ We implemented the sketch feature extraction mechanism mentioned in the followin
 
 ##Usage
 * Download the files
-* Run ```python setup.py install```
+* Run ```python setup.py build``` to build the code
+* Run ```python setup.py install``` to install the module (this action may require sudo privileges)
 * You can try running the following code to see if it is working:
 
 ```
-import FeatureExtractor
+from sketchfe import FeatureExtractor
 idm = FeatureExtractor.IDMFeatureExtractor()
 idm.extractimage_test()
 ```
@@ -48,13 +49,42 @@ The following examples refer to the same sketch.
 </sketch>
 ```
 
-* Points as rows
+* Points as table
 ```
     1\t9\t0\t4.6\n6\t5\t0\t8\n10.2\t44.4\t1\t9\n3\t77\t1\t12\n5\t7\t1\t13
 ```
 
+There will be more feature extraction methods in the upcoming versions.
 
-There will be more feature extraction methods in the following versions.
+##Loading sketches from files
+This library has built-in functions to load sketches from XML, JSON and text files containing points as table (see the previous section for the content organization of these types). Some examples regarding the usage of these functions are given below.
+
+* Loading a sketch from an XML file
+```
+from sketchfe import shapecreator
+filename = "sketch.xml" #the name of the sketch file
+with open(filename,'rb') as f:
+     filecontent = f.read()
+     loadedSketch = shapecreator.buildSketch(filecontent,'xml')
+```
+
+* Loading a sketch from a JSON file
+```
+from sketchfe import shapecreator
+filename = "sketch.json" #the name of the sketch file
+with open(filename,'rb') as f:
+     filecontent = f.read()
+     loadedSketch = shapecreator.buildSketch(filecontent,'json')
+```
+
+* Loading a sketch from a points table text file
+```
+from sketchfe import shapecreator
+filename = "sketch.txt" #the name of the sketch file
+with open(filename,'rb') as f:
+     filecontent = f.read()
+     loadedSketch = shapecreator.buildSketch(filecontent,'school')
+```
 
 ###Contact
 oaltiok15@ku.edu.tr - Ozan Can Altıok
