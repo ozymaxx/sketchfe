@@ -86,6 +86,15 @@ with open(filename,'rb') as f:
      loadedSketch = shapecreator.buildSketch(filecontent,'school')
 ```
 
+##Extracting Features
+By creating an instance of `IDMFeatureExtractor` , which is the sub-class of `FeatureExtractor`, you can extract features of a sketch represented as an instance of `Sketch` class. The following code snippet basically extracts feature of a `Sketch` instance `sk`:
+
+```
+import sketchfe.FeatureExtractor.IDMFeatureExtractor
+featextractor = IDMFeatureExtractor()
+features = featextractor.extract(sk) # features includes the feat. representation as an array
+```
+
 ###Contact
 * oaltiok15@ku.edu.tr - Ozan Can Altıok
 * kkaiyrbekov15@ku.edu.tr - Kurmanbek Kaiyrbekov
