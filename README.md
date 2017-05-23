@@ -1,8 +1,8 @@
-#Sketch Feature Extractor Python 2.7 Implementation
+# Sketch Feature Extractor Python 2.7 Implementation
 We implemented the sketch feature extraction mechanism mentioned in the following paper:
 [http://rationale.csail.mit.edu/publications/Ouyang2009IJCAI.pdf](http://rationale.csail.mit.edu/publications/Ouyang2009IJCAI.pdf)
 
-##Usage
+## Usage
 * Download the files
 * Run ```python setup.py build``` to build the code
 * Run ```python setup.py install``` to install the module (this action may require sudo privileges)
@@ -14,7 +14,7 @@ idm = FeatureExtractor.IDMFeatureExtractor()
 idm.extractimage_test()
 ```
 
-##The format of the symbol sketches
+## The format of the symbol sketches
 A sketch is defined as a set of strokes including ink points. You can keep the sketches in 3 different formats, described below.
 
 The following examples refer to the same sketch.
@@ -56,7 +56,7 @@ The following examples refer to the same sketch.
 
 There will be more feature extraction methods in the upcoming versions.
 
-##Loading sketches from files
+## Loading sketches from files
 This library has built-in functions to load sketches from XML, JSON and text files containing points as table (see the previous section for the content organization of these types). Some examples regarding the usage of these functions are given below.
 
 * Loading a sketch from an XML file
@@ -86,7 +86,7 @@ with open(filename,'rb') as f:
      loadedSketch = shapecreator.buildSketch(filecontent,'school')
 ```
 
-##Extracting Features
+## Extracting Features
 By creating an instance of `IDMFeatureExtractor` , which is the sub-class of `FeatureExtractor`, you can extract features of a sketch represented as an instance of `Sketch` class. The following code snippet basically extracts feature of a `Sketch` instance `sk`:
 
 ```
@@ -95,7 +95,7 @@ featextractor = IDMFeatureExtractor()
 features = featextractor.extract(sk) # features includes the feat. representation as an array
 ```
 
-###Contact
+### Contact
 * oaltiok15@ku.edu.tr - Ozan Can Altıok
 * kkaiyrbekov15@ku.edu.tr - Kurmanbek Kaiyrbekov
 
