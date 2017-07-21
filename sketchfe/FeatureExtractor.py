@@ -110,7 +110,7 @@ class IDMFeatureExtractor(FeatureExtractor):
         return result
 
     def pointsToImage(self, sketch, imsize, pixels, center, scale ):
-        image = np.zeros( imsize.astype(numpy.int64) )
+        image = np.zeros( imsize.astype(np.int64) )
         for ind in range(0, len(sketch.strokes)):
             transformed = self.transform( sketch.strokes[ind].listCoordinates(), center, scale, imsize )
             image = self.drawBresenham(image, transformed, pixels[ind])
