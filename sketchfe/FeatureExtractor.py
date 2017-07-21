@@ -144,7 +144,7 @@ class IDMFeatureExtractor(FeatureExtractor):
             dy   = temp
             
         if( dy == 0 ):
-            q = np.zeros((dx+1, 1))
+            q = np.zeros((dx.astype(np.int64)+1, 1))
         else:
             temp = np.array( [0] )
             arr = np.arange( np.floor( dx/2 ), -dy*dx + np.floor( dx/2 ) - 1, -dy )
