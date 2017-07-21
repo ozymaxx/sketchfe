@@ -181,7 +181,7 @@ class IDMFeatureExtractor(FeatureExtractor):
     def pixelValues(self, distance ):        
         angle_threshold = 45
         valid_indices   = distance <= angle_threshold
-        invalid_indices = -valid_indices
+        invalid_indices = ~valid_indices
         distance[ valid_indices ]   = 1 - ( distance[ valid_indices ] / angle_threshold )
         distance[ invalid_indices ] = 0
         
