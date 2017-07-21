@@ -268,7 +268,7 @@ class IDMFeatureExtractor(FeatureExtractor):
                         ax = j + (fj - hsize//2)
                         
                         if ax >= 0 and ay >= 0 and ax < xd and ay < yd:
-                            summ = summ + im[ay,ax] * gfilter[fi,fj]
+                            summ = summ + im[ay.astype(np.int64),ax.astype(np.int64)] * gfilter[fi,fj]
                             
                 result[i,j] = summ
         

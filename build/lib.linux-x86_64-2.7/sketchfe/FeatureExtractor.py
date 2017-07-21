@@ -124,8 +124,8 @@ class IDMFeatureExtractor(FeatureExtractor):
             if( pixels[ind] > 0 ):
                 x, y = self.bresenham( c[0,0], c[0, 1], c[1,0], c[1,1])
                 for j in range(0, len(x)):
-                    if(image[y[j], x[j]] < pixels[ind]):
-                        image[y[j], x[j]] = pixels[ind]
+                    if(image[y[j].astype(np.int64), x[j].astype(np.int64)] < pixels[ind]):
+                        image[y[j].astype(np.int64), x[j].astype(np.int64)] = pixels[ind]
                         
         return image
         
