@@ -96,7 +96,7 @@ class IDMFeatureExtractor(FeatureExtractor):
                 transformed = self.transform(ends, center, scale, imsize)
                 
                 for ind in range(0, len(transformed)):
-                    image[ transformed[ind, 1], transformed[ind, 0] ] = 1.0 #WHY X is second coordinate?
+                    image[ transformed[ind, 1].astype(np.int64), transformed[ind, 0].astype(np.int64) ] = 1.0 #WHY X is second coordinate?
                     
         image = self.smoothim(image, sigma, hsize)
         image = self.downsample(image)
