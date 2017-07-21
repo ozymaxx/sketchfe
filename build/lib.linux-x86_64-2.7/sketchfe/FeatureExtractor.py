@@ -74,7 +74,7 @@ class IDMFeatureExtractor(FeatureExtractor):
         imsize = np.array([ 2 * grid_width, 2 * grid_height ])
         scale  = ( imsize )/ ( 2.5 * 2 )
         cur_angle2 = ( cur_angle + 180 ) % 360
-        image = np.zeros( imsize )
+        image = np.zeros( (2*grid_width,2*grid_height) )
         pixels = []
         
         if( endpt == False ):
