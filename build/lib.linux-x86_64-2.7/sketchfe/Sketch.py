@@ -41,7 +41,10 @@ class Sketch:
         mean = np.mean(coords, 0)
         sdev = np.std(coords, 0)
         coords = coords - mean
-        coords = coords * ( 1 / sdev )
+        
+        if sdev[0] != 0 and sdev[1] != 0:
+			coords = coords * ( 1 / sdev )
+			
         new_sketch = self.constructNormalizedSketch(coords, point_count, stroke_count )
         
         if verbose:
