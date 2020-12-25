@@ -48,9 +48,12 @@ class IDMFeatureExtractor(FeatureExtractor):
         featim3 = self.extractFeatureImage( theta, n_sketch, grid_width, grid_height, 90, False, sigma, hsize  )
         featim4 = self.extractFeatureImage( theta, n_sketch, grid_width, grid_height, 135, False, sigma, hsize  )
         featim5 = self.extractFeatureImage( theta, n_sketch, grid_width, grid_height, 0, True, sigma, hsize  )
-        
-        feature = np.concatenate([featim1.flatten(1), featim2.flatten(1), featim3.flatten(1), featim4.flatten(1), featim5.flatten(1)])
-        '''
+        feature = np.concatenate([featim1.flatten(),
+                                  featim2.flatten(),
+                                  featim3.flatten(),
+                                  featim4.flatten(),
+                                  featim5.flatten()])
+
         plt.figure(randint(0, 20))
         print('length', len(feature))
         plt.subplot(2, 3, 1)
@@ -64,8 +67,9 @@ class IDMFeatureExtractor(FeatureExtractor):
         plt.subplot(2, 3, 5)
         plt.imshow(featim5)
         plt.subplot(2, 3, 6)
-        plt.imshow((featim1 + featim2 + featim3 + featim4 + featim5) / 5 ) '''
-       
+        plt.imshow((featim1 + featim2 + featim3 + featim4 + featim5) / 5 )
+        plt.show()
+
         return feature
       
     
@@ -106,7 +110,7 @@ class IDMFeatureExtractor(FeatureExtractor):
     def extractimage_test(self):
         sk1,sk2,sk3 = shapecreator.test()
         result = self.extract(sk3)
-        print result
+        print(result)
         return result
 
     def pointsToImage(self, sketch, imsize, pixels, center, scale ):
@@ -238,11 +242,11 @@ class IDMFeatureExtractor(FeatureExtractor):
         # obtain the image size
         dims = im.shape
         # create the zeros matrix with the same size
-        result = np.zeros((dims[0]/2,dims[1]/2))
+        result = np.zeros((math.floor(dims[0]/2), math.floor(dims[1]/2)))
         
         # for each pixel in the image
-        for i in range(dims[0]/2):
-            for j in range(dims[1]/2):
+        for i in range(math.floor(dims[0]/2)):
+            for j in range(math.floor(dims[1]/2)):
                 # get the maximum of 2x2 window around the pixel
                 result[i,j] = np.max( im[range(i*2,i*2+2),range(j*2,j*2+2)] )
                 
