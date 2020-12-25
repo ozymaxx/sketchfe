@@ -1,4 +1,4 @@
-# Sketch Feature Extractor Python 2.7 Implementation</h2>
+# Sketch Feature Extractor Python 2.x/3.x Implementation</h2>
 
 We implemented the sketch feature extraction mechanism mentioned in the following paper:
 [http://rationale.csail.mit.edu/publications/Ouyang2009IJCAI.pdf](http://rationale.csail.mit.edu/publications/Ouyang2009IJCAI.pdf)
