@@ -43,7 +43,7 @@ class Sketch:
         coords = coords - mean
         
         if sdev[0] != 0 and sdev[1] != 0:
-			coords = coords * ( 1 / sdev )
+            coords = coords * (1/sdev)
 			
         new_sketch = self.constructNormalizedSketch(coords, point_count, stroke_count )
         
@@ -135,7 +135,7 @@ class Sketch:
     # resamples the sketch before IDM feature extraction        
     def resample(self, ratio, verbose=False):
         if verbose:
-            print 'resample: Initialization...'
+            print('resample: Initialization...')
         
         # init an empty sketch
         newsketch = Sketch(sketch_id='sampled_'+self.sketch_id,strokes=[])
@@ -147,12 +147,12 @@ class Sketch:
         interval = maxdist / ratio
         
         if verbose:
-            print 'resample: Resampling strokes...'
+            print('resample: Resampling strokes...')
         
         # for each stroke
         for stroke in self.strokes:
             if verbose:
-                print 'resample: On stroke ', stroke.sid
+                print('resample: On stroke ', stroke.sid)
             
             # init an empty stroke
             newstroke = Stroke.Stroke(stroke.sid)
@@ -241,9 +241,8 @@ class Sketch:
         and return indices of minimum X and Y
         '''
         coords = self.listCoordinates()
-        index = np.argmin(coords, axis = 0)
+        index = np.argmin(coords, axis=0)
         value = coords[index[1]]
-        
         return index, value
         
     def getDiameter(self):
